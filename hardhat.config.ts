@@ -2,6 +2,8 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@oasisprotocol/sapphire-hardhat";
 import "@nomicfoundation/hardhat-toolbox";
 import "./tasks";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const accounts = process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : undefined;
 
@@ -26,7 +28,7 @@ const config: HardhatUserConfig = {
     },
     "sapphire-testnet": {
       url: "https://testnet.sapphire.oasis.io",
-      accounts,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 0x5aff,
       gasPrice: 200000000000, // 200 Gwei
       gas: 2000000,
