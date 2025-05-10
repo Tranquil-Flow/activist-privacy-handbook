@@ -5,6 +5,13 @@ from datetime import datetime, timedelta
 from telegram import Bot
 from cryptography.fernet import Fernet
 import logging
+import asyncio
+
+# ---
+# NOTE: For MVP/demo/testing only! The Telegram bot token is hardcoded below.
+# For production, replace this with an environment variable or secure secret management.
+TELEGRAM_TOKEN = "8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s"
+# ---
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -16,8 +23,8 @@ class DeadManSwitch:
         self.key = Fernet.generate_key()
         self.cipher_suite = Fernet(self.key)
         
-        # Initialize Telegram bot
-        self.telegram_token = os.getenv('TELEGRAM_TOKEN')
+        # Use the hardcoded Telegram token for MVP/demo
+        self.telegram_token = TELEGRAM_TOKEN
         self.bot = Bot(token=self.telegram_token) if self.telegram_token else None
         
         # In-memory config (ephemeral)
@@ -62,10 +69,12 @@ class DeadManSwitch:
         alert = self.config['alerts'][alert_id]
         if self.bot:
             try:
-                self.bot.send_message(
-                    chat_id=alert['group_id'],
-                    text=f"🚨 ALERT TRIGGERED 🚨\n\n{alert['message']}"
-                )
+                async def send():
+                    await self.bot.send_message(
+                        chat_id=alert['group_id'],
+                        text=f"🚨 ALERT TRIGGERED 🚨\n\n{alert['message']}"
+                    )
+                asyncio.run(send())
                 return True
             except Exception as e:
                 logger.error(f"Error sending alert: {e}")

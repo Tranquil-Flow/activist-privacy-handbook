@@ -8,7 +8,7 @@ GROUP_ID = "-1002687819162"  # Your group/channel ID
 async def main():
     bot = Bot(token=TELEGRAM_TOKEN)
     try:
-        await bot.send_message(chat_id=GROUP_ID, text="Test message from minimal script (async).")
+        await bot.send_message(chat_id=GROUP_ID, text="Test message from minimal script")
         print("Message sent!")
     except Exception as e:
         print(f"Failed to send message: {e}")
