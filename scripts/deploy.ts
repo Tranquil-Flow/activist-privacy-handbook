@@ -1,15 +1,13 @@
 import { ethers } from 'hardhat';
 
 async function main() {
-  // Get the contract factory
+  const [deployer] = await ethers.getSigners();
+  const admin = deployer.address;
+  const roflAppID = "0x000000000000000000000000000000000000000000"; // dummy roflAppID (bytes21)
   const DeadManSwitch = await ethers.getContractFactory('DeadManSwitch');
-
-  // Deploy the contract
-  const deadManSwitch = await DeadManSwitch.deploy();
-
-  // Get the deployed contract address
-  const address = await deadManSwitch.getAddress();
-  console.log('DeadManSwitch deployed to:', address);
+  const deadManSwitch = await DeadManSwitch.deploy(admin, roflAppID);
+  await deadManSwitch.waitForDeployment();
+  console.log('DeadManSwitch deployed to:', await deadManSwitch.getAddress());
 }
 
 // We recommend this pattern to be able to use async/await everywhere
@@ -17,4 +15,4 @@ async function main() {
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
-}); 
+});

@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
+
+import { Subcall } from "@oasisprotocol/sapphire-contracts/contracts/Subcall.sol";
 
 /*
  * @title DeadManSwitch
@@ -9,6 +11,7 @@ pragma solidity ^0.8.0;
  */
 contract DeadManSwitch {
     struct Alert {
+        address user;  // The user who owns this alert
         string message;
         string groupId;
         uint256 expiryDate;
@@ -17,12 +20,20 @@ contract DeadManSwitch {
         uint256 lastCheckIn;
     }
 
-    /// @notice Mapping of user addresses to their alerts.
-    mapping(address => mapping(bytes32 => Alert)) public alerts;
+    /// @notice Mapping of alert IDs to their alerts.
+    mapping(bytes32 => Alert) public alerts;
 
-    event AlertCreated(address indexed user, bytes32 indexed alertId, string message, string groupId, uint256 expiryDate, uint256 checkInDays);
-    event AlertCheckedIn(address indexed user, bytes32 indexed alertId, uint256 lastCheckIn);
-    event AlertTriggered(address indexed user, bytes32 indexed alertId, string message);
+    address public admin;
+    bytes21 public roflAppID;
+
+    event AlertCreated(bytes32 indexed alertId, address indexed user, string message, string groupId, uint256 expiryDate, uint256 checkInDays);
+    event AlertCheckedIn(bytes32 indexed alertId, address indexed user, uint256 lastCheckIn);
+    event AlertTriggered(bytes32 indexed alertId, address indexed user, string message);
+
+    constructor(address _admin, bytes21 _roflAppID) {
+        admin = _admin;
+        roflAppID = _roflAppID;
+    }
 
     /// @notice Create an alert.
     function createAlert(
@@ -32,12 +43,13 @@ contract DeadManSwitch {
         uint256 expiryDays,
         uint256 checkInDays
     ) external {
-        require(alerts[msg.sender][alertId].createdAt == 0, "Alert already exists");
+        require(alerts[alertId].createdAt == 0, "Alert already exists");
 
         uint256 expiryDate = block.timestamp + (expiryDays * 1 days);
         uint256 createdAt = block.timestamp;
 
-        alerts[msg.sender][alertId] = Alert({
+        alerts[alertId] = Alert({
+            user: msg.sender,
             message: message,
             groupId: groupId,
             expiryDate: expiryDate,
@@ -46,28 +58,35 @@ contract DeadManSwitch {
             lastCheckIn: createdAt
         });
 
-        emit AlertCreated(msg.sender, alertId, message, groupId, expiryDate, checkInDays);
+        emit AlertCreated(alertId, msg.sender, message, groupId, expiryDate, checkInDays);
     }
 
     /// @notice Check in on an alert to prevent it from being triggered.
     function checkIn(bytes32 alertId) external {
-        require(alerts[msg.sender][alertId].createdAt != 0, "Alert does not exist");
+        require(alerts[alertId].createdAt != 0, "Alert does not exist");
+        require(alerts[alertId].user == msg.sender, "Not the alert owner");
 
-        alerts[msg.sender][alertId].lastCheckIn = block.timestamp;
+        alerts[alertId].lastCheckIn = block.timestamp;
 
-        emit AlertCheckedIn(msg.sender, alertId, block.timestamp);
+        emit AlertCheckedIn(alertId, msg.sender, block.timestamp);
     }
 
-    /// @notice Trigger an alert.
-    /// @dev Triggered if a user has not checked in within the specified time OR is manually triggered by user.
-    function triggerAlert(bytes32 alertId) external {
-        require(alerts[msg.sender][alertId].createdAt != 0, "Alert does not exist");
+    /// @notice Trigger an alert (ROFL TEE only).
+    function triggerAlertByROFL(bytes32 alertId) external {
+        Subcall.roflEnsureAuthorizedOrigin(roflAppID);
+        _triggerAlert(alertId);
+    }
 
-        Alert memory alert = alerts[msg.sender][alertId];
-        require(block.timestamp > alert.expiryDate, "Alert has not expired");
+    /// @notice Trigger an alert (admin only).
+    function triggerAlertByAdmin(bytes32 alertId) external {
+        require(msg.sender == admin, "Not admin");
+        _triggerAlert(alertId);
+    }
 
-        emit AlertTriggered(msg.sender, alertId, alert.message);
-
-        delete alerts[msg.sender][alertId];
+    function _triggerAlert(bytes32 alertId) internal {
+        require(alerts[alertId].createdAt != 0, "Alert does not exist");
+        Alert memory alert = alerts[alertId];
+        emit AlertTriggered(alertId, msg.sender, alert.message);
+        delete alerts[alertId];
     }
 }

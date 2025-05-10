@@ -1,10 +1,8 @@
-FROM python:3.9-slim
+FROM python:alpine3.17
 
 WORKDIR /app
-
-COPY requirements.txt .
+COPY ./app.py ./api.py ./cli.py ./requirements.txt /app/
+COPY ./contracts/DeadManSwitch.json /app/contracts/
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py cli.py ./
-
-ENTRYPOINT ["python", "cli.py"] 
+ENTRYPOINT ["python", "api.py"]

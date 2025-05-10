@@ -1,4 +1,6 @@
-python-telegram-bot==22.0
-cryptography==44.0.3
-flask==3.0.2
-flask-cors==4.0.0 
+python-telegram-bot
+cryptography
+web3
+flask
+python-dotenv
+flask_cors
