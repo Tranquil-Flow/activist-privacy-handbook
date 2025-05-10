@@ -1,0 +1,15 @@
+name: deadmanswitch
+version: 1.0.0
+description: A confidential dead man's switch application
+
+services:
+  deadmanswitch:
+    image: ${DOCKER_REGISTRY}/deadmanswitch:latest
+    platform: linux/amd64
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    volumes:
+      - /run/rofl-appd.sock:/run/rofl-appd.sock
+
+secrets:
+  - TELEGRAM_TOKEN 
