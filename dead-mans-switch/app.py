@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 class DeadManSwitch:
@@ -125,6 +125,26 @@ class DeadManSwitch:
         """Check all users' alerts and trigger if conditions are met."""
         # This method is no longer needed as the smart contract handles alert triggering
         pass
+    
+
+    # TODO: Fix this
+    def set_rofl_app_id(self, rofl_app_id: str) -> bool:
+        """Set the ROFL App ID (admin only)."""
+        try:
+            tx = self.contract.functions.setRoflAppID(rofl_app_id).build_transaction({
+                'from': self.admin_account.address,
+                'gas': 2000000,
+                'gasPrice': self.web3.eth.gas_price,
+                'nonce': self.web3.eth.get_transaction_count(self.admin_account.address),
+            })
+            signed_tx = self.admin_account.sign_transaction(tx)
+            tx_hash = self.web3.eth.send_raw_transaction(signed_tx.raw_transaction)
+            receipt = self.web3.eth.wait_for_transaction_receipt(tx_hash)
+            return receipt.status == 1
+        except Exception as e:
+            logger.error(f"Error setting ROFL App ID: {e}")
+            print(f"Error setting ROFL App ID: {e}")
+            return False
 
 def main():
     switch = DeadManSwitch()

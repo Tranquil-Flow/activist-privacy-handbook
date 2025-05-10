@@ -3,8 +3,7 @@
   "abi": [
     {
       "inputs": [
-        { "internalType": "address", "name": "_admin", "type": "address" },
-        { "internalType": "bytes21", "name": "_roflAppID", "type": "bytes21" }
+        { "internalType": "address", "name": "_admin", "type": "address" }
       ],
       "stateMutability": "nonpayable",
       "type": "constructor"
@@ -43,6 +42,15 @@
       "type": "event"
     },
     {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": false, "internalType": "bytes21", "name": "oldRoflAppID", "type": "bytes21" },
+        { "indexed": false, "internalType": "bytes21", "name": "newRoflAppID", "type": "bytes21" }
+      ],
+      "name": "RoflAppIDUpdated",
+      "type": "event"
+    },
+    {
       "inputs": [
         { "internalType": "bytes32", "name": "", "type": "bytes32" }
       ],
@@ -77,6 +85,15 @@
         { "internalType": "uint256", "name": "checkInDays", "type": "uint256" }
       ],
       "name": "createAlert",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "bytes32", "name": "alertId", "type": "bytes32" }
+      ],
+      "name": "setRoflAppID",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

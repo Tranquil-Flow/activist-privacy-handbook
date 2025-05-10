@@ -3,9 +3,8 @@ import { ethers } from 'hardhat';
 async function main() {
   const [deployer] = await ethers.getSigners();
   const admin = deployer.address;
-  const roflAppID = "0x000000000000000000000000000000000000000000"; // dummy roflAppID (bytes21)
   const DeadManSwitch = await ethers.getContractFactory('DeadManSwitch');
-  const deadManSwitch = await DeadManSwitch.deploy(admin, roflAppID);
+  const deadManSwitch = await DeadManSwitch.deploy(admin);
   await deadManSwitch.waitForDeployment();
   console.log('DeadManSwitch deployed to:', await deadManSwitch.getAddress());
 }

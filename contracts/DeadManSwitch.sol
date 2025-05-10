@@ -29,10 +29,18 @@ contract DeadManSwitch {
     event AlertCreated(bytes32 indexed alertId, address indexed user, string message, string groupId, uint256 expiryDate, uint256 checkInDays);
     event AlertCheckedIn(bytes32 indexed alertId, address indexed user, uint256 lastCheckIn);
     event AlertTriggered(bytes32 indexed alertId, address indexed user, string message);
+    event RoflAppIDUpdated(bytes21 oldRoflAppID, bytes21 newRoflAppID);
 
-    constructor(address _admin, bytes21 _roflAppID) {
+    constructor(address _admin) {
         admin = _admin;
-        roflAppID = _roflAppID;
+    }
+
+    /// @notice Update the ROFL app ID (admin only).
+    function setRoflAppID(bytes21 _newRoflAppID) external {
+        require(msg.sender == admin, "Not admin");
+        bytes21 oldRoflAppID = roflAppID;
+        roflAppID = _newRoflAppID;
+        emit RoflAppIDUpdated(oldRoflAppID, _newRoflAppID);
     }
 
     /// @notice Create an alert.

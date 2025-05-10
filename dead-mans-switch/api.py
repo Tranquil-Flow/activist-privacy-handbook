@@ -4,6 +4,7 @@ import uuid
 from app import DeadManSwitch
 import logging
 import secrets
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -83,6 +84,22 @@ def trigger_alert(alert_id):
 def list_alerts():
     """List all active alerts (not implemented)"""
     return jsonify({'error': 'Listing alerts is not implemented in contract-backed mode.'}), 501
+
+@app.route('/api/rofl-app-id', methods=['POST'])
+def set_rofl_app_id():
+    data = request.get_json()
+    rofl_app_id = data.get('rofl_app_id')
+    admin_secret = data.get('admin_secret')
+    # Basic protection: require admin_secret to match env var (optional, for demo)
+    if admin_secret != os.getenv('ADMIN_SECRET'):
+        return jsonify({'error': 'Unauthorized'}), 401
+    if not rofl_app_id:
+        return jsonify({'error': 'Missing rofl_app_id'}), 400
+    success = switch.set_rofl_app_id(rofl_app_id)
+    if success:
+        return jsonify({'message': 'ROFL App ID set successfully'}), 200
+    else:
+        return jsonify({'error': 'Failed to set ROFL App ID'}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True) 
