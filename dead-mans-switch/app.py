@@ -72,7 +72,7 @@ class DeadManSwitch:
                 async def send():
                     await self.bot.send_message(
                         chat_id=alert['group_id'],
-                        text=f"🚨 ALERT TRIGGERED 🚨\n\n{alert['message']}"
+                        text=f"🚨 ALERT TRIGGERED 🚨\n\n- {alert['message']} -"
                     )
                 asyncio.run(send())
                 return True
