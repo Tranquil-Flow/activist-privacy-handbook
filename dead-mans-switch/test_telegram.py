@@ -2,7 +2,7 @@ import os
 import asyncio
 from telegram import Bot
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = "8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s"
 GROUP_ID = "-1002687819162"  # Your group/channel ID
 
 async def main():
@@ -14,4 +14,4 @@ async def main():
         print(f"Failed to send message: {e}")
 
 if __name__ == "__main__":
-    asyncio.run(main()) 
+    asyncio.run(main())
