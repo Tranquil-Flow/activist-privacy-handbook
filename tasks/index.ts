@@ -120,36 +120,58 @@ task("verify-participation")
   });
 
 task("full-demo").setAction(async (_args, hre) => {
-  await hre.run("compile");
+  try {
+    console.log("Starting full demo...");
+    
+    // Compile contracts
+    await hre.run("compile");
+    console.log("Contracts compiled successfully");
 
-  const address = await hre.run("deploy");
-  console.log("Contract deployed at:", address);
+    // Deploy contract
+    const address = await hre.run("deploy");
+    console.log("Contract deployed at:", address);
 
-  // Create a test event
-  await hre.run("create-event", {
-    address,
-    name: "Climate March",
-    points: "Start Point, Mid Point, End Point",
-    duration: "24"
-  });
+    // Get signer
+    const [signer] = await hre.ethers.getSigners();
+    console.log("Using address:", signer.address);
 
-  // Get the event ID
-  const eventId = hre.ethers.keccak256(hre.ethers.toUtf8Bytes("Climate March"));
-  
-  // Mint a POAP for a test attendee
-  const [owner, attendee] = await hre.ethers.getSigners();
-  await hre.run("mint-poap", {
-    address,
-    eventId,
-    attendee: attendee.address,
-    tokenUri: "ipfs://test-uri",
-    geoHash: "0x1234567890123456789012345678901234567890123456789012345678901234"
-  });
+    // Create a test event
+    console.log("\nCreating test event...");
+    await hre.run("create-event", {
+      address,
+      name: "Climate March",
+      points: "Start Point, Mid Point, End Point",
+      duration: "24"
+    });
 
-  // Verify participation
-  await hre.run("verify-participation", {
-    address,
-    attendee: attendee.address,
-    eventId
-  });
+    // Get the event ID
+    const eventId = hre.ethers.keccak256(hre.ethers.toUtf8Bytes("Climate March"));
+    console.log("Event ID:", eventId);
+    
+    // Mint a POAP for the signer
+    console.log("\nMinting POAP...");
+    await hre.run("mint-poap", {
+      address,
+      eventId,
+      attendee: signer.address,
+      tokenUri: "ipfs://test-uri",
+      geoHash: "0x1234567890123456789012345678901234567890123456789012345678901234"
+    });
+
+    // Verify participation
+    console.log("\nVerifying participation...");
+    await hre.run("verify-participation", {
+      address,
+      attendee: signer.address,
+      eventId
+    });
+
+    console.log("\nFull demo completed successfully!");
+  } catch (error: any) {
+    console.error("\nDemo failed with error:", error.message);
+    if (error.receipt) {
+      console.error("Transaction receipt:", error.receipt);
+    }
+    process.exit(1);
+  }
 });
