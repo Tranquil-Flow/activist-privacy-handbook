@@ -63,15 +63,15 @@ This feature can **trigger help when silence becomes danger**.
 ---
 
 ## ⚙️ How It Works  
-`[INSERT TECH STACK DIAGRAM HERE]`
+<img width="1159" alt="Image" src="https://github.com/user-attachments/assets/8f2b9c99-0666-4ac2-8337-3a74aaac1e24" />
 
 ### 🔧 Tech Overview
 
 - **Oasis Sapphire** – Confidential EVM for encrypted smart contracts and private on-chain logic.  
 - **Oasis ROFL** – Secure TEE environment for off-chain logic (e.g. red alerts, proof validation).  
-- **ZK Identity Tools (e.g. Semaphore)** – To enable anonymity and unlinkable attestations.  
+- **ZK Identity Tools (e.g. Semaphore)** – To enable anonymity and unlinkable attestations.  COMING SOON
 - **Smart Contracts** – For soulbound credentials, timers, and proof mechanisms.  
-- **IPFS** *(optional)* – For decentralized metadata and document storage.
+- **IPFS** *(optional)* – For decentralized metadata and document storage. COMING SOON
 
 > ✅ We use `roflEnsureAuthorizedOrigin` to guarantee only verified, secure TEE-originated data is accepted on-chain.  
 > 🔧 _Note: Link to code implementation will be added soon._
