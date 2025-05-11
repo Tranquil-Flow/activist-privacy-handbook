@@ -17,7 +17,7 @@ In the face of growing authoritarianism and digital surveillance, activists arou
 
 Conventional digital tools like photos or chat logs are:
 - Easily manipulated  
-- Dangerous to share  
+- Can be incriminating to share  
 - Frequently dismissed in legal or asylum proceedings  
 
 **Blockchain isn’t just useful — it’s essential.**  
