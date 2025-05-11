@@ -89,6 +89,7 @@ This feature can **trigger help when silence becomes danger**.
 ---
 
 ## 🚧 Roadmap: Work in Progress
+We truly believe in the long-term existence of this project. We would aspire to continue improving the current features as well as adding more like: 
 
 - **🪙 Anonymous Fundraising**  
   Create and contribute to activist campaigns privately via blockchain-native donations.
