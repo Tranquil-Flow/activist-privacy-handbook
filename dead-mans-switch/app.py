@@ -57,28 +57,26 @@ class DeadManSwitch:
         tx_hash = self.web3.eth.send_raw_transaction(signed_tx.raw_transaction)
         return self.web3.eth.wait_for_transaction_receipt(tx_hash)
 
-    def create_alert(self, user_id: str, message: str, group_id: str, expiry_days: int, check_in_days: int) -> str:
+    def create_alert(self, user_id: str, message: str, group_id: str, expiry_seconds: int, check_in_seconds: int) -> str:
         """Create a new alert."""
         alert_id = Web3.keccak(text=f"{user_id}{message}{group_id}{int(time.time())}").hex()
         alert_id_bytes = Web3.to_bytes(hexstr=alert_id)
-        
+        logger.info(f"[CREATE_ALERT] alert_id_bytes (hex): {alert_id_bytes.hex()}")
         tx = self.contract.functions.createAlert(
             alert_id_bytes,
             message,
             group_id,
-            expiry_days,
-            check_in_days
+            expiry_seconds,
+            check_in_seconds
         ).build_transaction({
             'from': self.admin_account.address,
             'gas': 2000000,
             'gasPrice': self.web3.eth.gas_price,
             'nonce': self.web3.eth.get_transaction_count(self.admin_account.address),
         })
-        
         signed_tx = self.admin_account.sign_transaction(tx)
         tx_hash = self.web3.eth.send_raw_transaction(signed_tx.raw_transaction)
         self.web3.eth.wait_for_transaction_receipt(tx_hash)
-        
         return alert_id
 
     def check_in(self, user_id: str, alert_id: str) -> bool:
@@ -104,6 +102,21 @@ class DeadManSwitch:
         """Trigger an alert and return True on success, or the error message on failure."""
         try:
             alert_id_bytes = Web3.to_bytes(hexstr=alert_id)
+            logger.info(f"[TRIGGER_ALERT] alert_id_bytes (hex): {alert_id_bytes.hex()}")
+            
+            # Fetch alert details BEFORE triggering (since triggering deletes the alert)
+            alert = self.contract.functions.alerts(alert_id_bytes).call()
+            logger.info(f"Fetched alert before triggering: {alert}")
+            
+            # Check if alert exists
+            if alert[0] == '0x0000000000000000000000000000000000000000':
+                return "Alert does not exist or has already been triggered"
+                
+            # Save alert details we'll need after it's deleted
+            group_id = alert[2]  # groupId
+            message = alert[1]   # message
+            
+            # Now trigger the alert (which will delete it from the contract)
             tx = self.contract.functions.triggerAlertByAdmin(alert_id_bytes).build_transaction({
                 'from': self.admin_account.address,
                 'gas': 2000000,
@@ -113,19 +126,78 @@ class DeadManSwitch:
             signed_tx = self.admin_account.sign_transaction(tx)
             tx_hash = self.web3.eth.send_raw_transaction(signed_tx.raw_transaction)
             receipt = self.web3.eth.wait_for_transaction_receipt(tx_hash)
+            
             if receipt.status != 1:
                 logger.error("Trigger transaction reverted.")
                 return "Transaction reverted"
+                
+            # Send Telegram message with the details we saved BEFORE triggering
+            if self.bot:
+                import asyncio
+                try:
+                    loop = asyncio.get_running_loop()
+                except RuntimeError:
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+                loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 MANUAL ALERT TRIGGERED 🚨\n\n{message}"))
             return True
         except Exception as e:
             logger.error(f"Error triggering alert: {e}")
             return str(e)
 
-    def check_alerts(self):
-        """Check all users' alerts and trigger if conditions are met."""
-        # This method is no longer needed as the smart contract handles alert triggering
-        pass
-    
+    def trigger_alert_by_rofl(self, alert_id: str):
+        """Trigger an alert automatically by ROFL (dead man's switch) and return True on success, or the error message on failure."""
+        try:
+            alert_id_bytes = Web3.to_bytes(hexstr=alert_id)
+            logger.info(f"[TRIGGER_ALERT_BY_ROFL] alert_id_bytes (hex): {alert_id_bytes.hex()}")
+            
+            # Fetch alert details BEFORE triggering (since triggering deletes the alert)
+            alert = self.contract.functions.alerts(alert_id_bytes).call()
+            logger.info(f"Fetched alert before ROFL triggering: {alert}")
+            
+            # Check if alert exists
+            if alert[0] == '0x0000000000000000000000000000000000000000':
+                return "Alert does not exist or has already been triggered"
+                
+            # Save alert details we'll need after it's deleted
+            group_id = alert[2]  # groupId
+            message = alert[1]   # message
+            
+            # Now trigger the alert (which will delete it from the contract)
+            tx = self.contract.functions.triggerAlertByROFL(alert_id_bytes).build_transaction({
+                'from': self.admin_account.address,
+                'gas': 2000000,
+                'gasPrice': self.web3.eth.gas_price,
+                'nonce': self.web3.eth.get_transaction_count(self.admin_account.address),
+            })
+            signed_tx = self.admin_account.sign_transaction(tx)
+            tx_hash = self.web3.eth.send_raw_transaction(signed_tx.raw_transaction)
+            receipt = self.web3.eth.wait_for_transaction_receipt(tx_hash)
+            
+            if receipt.status != 1:
+                logger.error("ROFL trigger transaction reverted.")
+                return "Transaction reverted"
+                
+            # Send Telegram message with the details we saved BEFORE triggering
+            if self.bot:
+                import asyncio
+                try:
+                    loop = asyncio.get_running_loop()
+                except RuntimeError:
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+                loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 DEAD MANS SWITCH TRIGGERED 🚨\n\n{message}"))
+            return True
+        except Exception as e:
+            logger.error(f"Error triggering alert by ROFL: {e}")
+            return str(e)
+
+    def check_alerts(self, alert_id: str):
+        """Fetch and log all stored info for a given alert from the contract."""
+        alert_id_bytes = Web3.to_bytes(hexstr=alert_id)
+        alert = self.contract.functions.alerts(alert_id_bytes).call()
+        logger.info(f"Fetched alert from contract: {alert}")
+        return alert
 
     # TODO: Fix this
     def set_rofl_app_id(self, rofl_app_id: str) -> bool:

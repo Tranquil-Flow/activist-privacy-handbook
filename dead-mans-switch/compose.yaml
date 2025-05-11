@@ -8,4 +8,5 @@ services:
       - PRIVATE_KEY=${PRIVATE_KEY}
       - CONTRACT_ADDRESS=${CONTRACT_ADDRESS}
       - SAPPHIRE_RPC_URL=${SAPPHIRE_RPC_URL}
-      - ADMIN_SECRET=${ADMIN_SECRET}
+    ports:
+      - "5000:5000"

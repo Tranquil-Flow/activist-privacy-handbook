@@ -15,3 +15,31 @@ artifacts:
   container:
     runtime: https://github.com/oasisprotocol/oasis-sdk/releases/download/rofl-containers%2Fv0.5.0/rofl-containers#800be74e543f1d10d12ef6fadce89dd0a0ce7bc798dbab4f8d7aa012d82fbff1
     compose: compose.yaml
+deployments:
+  default:
+    app_id: rofl1qrqlxfcg8sve9h3m0rv8k7vp7r800x8lzuxr4hf2
+    network: testnet
+    paratime: sapphire
+    admin: testacc2
+    oci_repository: rofl.sh/b625214f-19af-414b-8b49-20d75aabdcd5:1746917620
+    trust_root:
+      height: 26538926
+      hash: 30b1a99e7edec84e47762a403da86a81e8d1a2f0bae1e0ae9344199dfce154a0
+    policy:
+      quotes:
+        pcs:
+          tcb_validity_period: 30
+          min_tcb_evaluation_data_number: 18
+          tdx: {}
+      enclaves:
+        - id: mawRIebKj3TPPLuPdfmFplfyiyxUGZxcCtlzfTMO3f0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: uIDwzHislBgtFNBUlxlwkD9RLuWTL2E/BUZOz29AghsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+      endorsements:
+        - any: {}
+      fees: endorsing_node
+      max_expiration: 3
+    machines:
+      default:
+        provider: oasis1qp2ens0hsp7gh23wajxa4hpetkdek3swyyulyrmz
+        offer: playground_short
+        id: "0000000000000060"

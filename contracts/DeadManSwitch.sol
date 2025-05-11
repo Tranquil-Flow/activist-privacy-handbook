@@ -14,8 +14,8 @@ contract DeadManSwitch {
         address user;  // The user who owns this alert
         string message;
         string groupId;
-        uint256 expiryDate;
-        uint256 checkInDays;
+        uint256 expiryTime; // Expiry timestamp (in seconds)
+        uint256 checkInSeconds; // Check-in interval (in seconds)
         uint256 createdAt;
         uint256 lastCheckIn;
     }
@@ -26,7 +26,7 @@ contract DeadManSwitch {
     address public admin;
     bytes21 public roflAppID;
 
-    event AlertCreated(bytes32 indexed alertId, address indexed user, string message, string groupId, uint256 expiryDate, uint256 checkInDays);
+    event AlertCreated(bytes32 indexed alertId, address indexed user, string message, string groupId, uint256 expiryTime, uint256 checkInSeconds);
     event AlertCheckedIn(bytes32 indexed alertId, address indexed user, uint256 lastCheckIn);
     event AlertTriggered(bytes32 indexed alertId, address indexed user, string message);
     event RoflAppIDUpdated(bytes21 oldRoflAppID, bytes21 newRoflAppID);
@@ -43,30 +43,30 @@ contract DeadManSwitch {
         emit RoflAppIDUpdated(oldRoflAppID, _newRoflAppID);
     }
 
-    /// @notice Create an alert.
+    /// @notice Create an alert. Expiry and check-in are in seconds.
     function createAlert(
         bytes32 alertId,
         string memory message,
         string memory groupId,
-        uint256 expiryDays,
-        uint256 checkInDays
+        uint256 expirySeconds,
+        uint256 checkInSeconds
     ) external {
         require(alerts[alertId].createdAt == 0, "Alert already exists");
 
-        uint256 expiryDate = block.timestamp + (expiryDays * 1 days);
+        uint256 expiryTime = block.timestamp + expirySeconds;
         uint256 createdAt = block.timestamp;
 
         alerts[alertId] = Alert({
             user: msg.sender,
             message: message,
             groupId: groupId,
-            expiryDate: expiryDate,
-            checkInDays: checkInDays,
+            expiryTime: expiryTime,
+            checkInSeconds: checkInSeconds,
             createdAt: createdAt,
             lastCheckIn: createdAt
         });
 
-        emit AlertCreated(alertId, msg.sender, message, groupId, expiryDate, checkInDays);
+        emit AlertCreated(alertId, msg.sender, message, groupId, expiryTime, checkInSeconds);
     }
 
     /// @notice Check in on an alert to prevent it from being triggered.

@@ -20,7 +20,7 @@ switch = DeadManSwitch()
 def create_alert():
     """Create a new alert"""
     data = request.get_json()
-    required_fields = ['user_id', 'message', 'group_id', 'expiry_days', 'check_in_days']
+    required_fields = ['user_id', 'message', 'group_id', 'expiry_seconds', 'check_in_seconds']
     
     if not all(field in data for field in required_fields):
         return jsonify({'error': 'Missing required fields'}), 400
@@ -30,8 +30,8 @@ def create_alert():
             user_id=data['user_id'],
             message=data['message'],
             group_id=data['group_id'],
-            expiry_days=int(data['expiry_days']),
-            check_in_days=int(data['check_in_days'])
+            expiry_seconds=int(data['expiry_seconds']),
+            check_in_seconds=int(data['check_in_seconds'])
         )
         
         if alert_id:
@@ -84,22 +84,6 @@ def trigger_alert(alert_id):
 def list_alerts():
     """List all active alerts (not implemented)"""
     return jsonify({'error': 'Listing alerts is not implemented in contract-backed mode.'}), 501
-
-@app.route('/api/rofl-app-id', methods=['POST'])
-def set_rofl_app_id():
-    data = request.get_json()
-    rofl_app_id = data.get('rofl_app_id')
-    admin_secret = data.get('admin_secret')
-    # Basic protection: require admin_secret to match env var (optional, for demo)
-    if admin_secret != os.getenv('ADMIN_SECRET'):
-        return jsonify({'error': 'Unauthorized'}), 401
-    if not rofl_app_id:
-        return jsonify({'error': 'Missing rofl_app_id'}), 400
-    success = switch.set_rofl_app_id(rofl_app_id)
-    if success:
-        return jsonify({'message': 'ROFL App ID set successfully'}), 200
-    else:
-        return jsonify({'error': 'Failed to set ROFL App ID'}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True) 

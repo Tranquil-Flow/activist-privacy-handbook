@@ -25,8 +25,8 @@
         { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
         { "indexed": false, "internalType": "string", "name": "message", "type": "string" },
         { "indexed": false, "internalType": "string", "name": "groupId", "type": "string" },
-        { "indexed": false, "internalType": "uint256", "name": "expiryDate", "type": "uint256" },
-        { "indexed": false, "internalType": "uint256", "name": "checkInDays", "type": "uint256" }
+        { "indexed": false, "internalType": "uint256", "name": "expiryTime", "type": "uint256" },
+        { "indexed": false, "internalType": "uint256", "name": "checkInSeconds", "type": "uint256" }
       ],
       "name": "AlertCreated",
       "type": "event"
@@ -59,8 +59,8 @@
         { "internalType": "address", "name": "user", "type": "address" },
         { "internalType": "string", "name": "message", "type": "string" },
         { "internalType": "string", "name": "groupId", "type": "string" },
-        { "internalType": "uint256", "name": "expiryDate", "type": "uint256" },
-        { "internalType": "uint256", "name": "checkInDays", "type": "uint256" },
+        { "internalType": "uint256", "name": "expiryTime", "type": "uint256" },
+        { "internalType": "uint256", "name": "checkInSeconds", "type": "uint256" },
         { "internalType": "uint256", "name": "createdAt", "type": "uint256" },
         { "internalType": "uint256", "name": "lastCheckIn", "type": "uint256" }
       ],
@@ -81,8 +81,8 @@
         { "internalType": "bytes32", "name": "alertId", "type": "bytes32" },
         { "internalType": "string", "name": "message", "type": "string" },
         { "internalType": "string", "name": "groupId", "type": "string" },
-        { "internalType": "uint256", "name": "expiryDays", "type": "uint256" },
-        { "internalType": "uint256", "name": "checkInDays", "type": "uint256" }
+        { "internalType": "uint256", "name": "expirySeconds", "type": "uint256" },
+        { "internalType": "uint256", "name": "checkInSeconds", "type": "uint256" }
       ],
       "name": "createAlert",
       "outputs": [],
