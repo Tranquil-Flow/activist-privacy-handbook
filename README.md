@@ -20,8 +20,8 @@ Conventional digital tools like photos or chat logs are:
 - Can be incriminating to share  
 - Frequently dismissed in legal or asylum proceedings  
 
-**Blockchain isn’t just useful — it’s essential.**  
-It’s the **only infrastructure** that makes proof tamper-proof, decentralized, and permanent.
+**Blockchain isn't just useful — it's essential.**  
+It's the **only infrastructure** that makes proof tamper-proof, decentralized, and permanent.
 
 ---
 
@@ -43,7 +43,7 @@ It’s the **only infrastructure** that makes proof tamper-proof, decentralized,
 ### ✅ Proof of Protest  
 > _Anonymous, verifiable presence — without needing to reveal your face or contacts._
 
-**Sidika** is applying for asylum in the Netherlands. As a gender rights activist from Turkey, she must prove her involvement in protests — but she never appeared in photos and won’t share private chats.  
+**Sidika** is applying for asylum in the Netherlands. As a gender rights activist from Turkey, she must prove her involvement in protests — but she never appeared in photos and won't share private chats.  
 Using Activist Toolkit, she receives an **immutable, peer-attested credential**: she was present at X protest, on Y date, verified by trusted witnesses.
 
 Now she has verifiable proof — **without compromising herself or others**.
@@ -115,6 +115,28 @@ This project qualifies for:
 - [Video Demo](INSERT_LINK)  
 - [GitHub Repository](INSERT_LINK)  
 - [Smart Contract Address](INSERT_CONTRACT_LINK)
+
+---
+
+## Testing
+
+Running Tests
+
+To run the test suite (including DeadManSwitch.test.ts and ProofOfProtest.test.ts), execute the following command in your terminal (from the project root):
+
+```bash
+npx hardhat test
+```
+
+If you wish to run a specific test file, for example, run DeadManSwitch tests or ProofOfProtest tests, use:
+
+```bash
+npx hardhat test test/DeadManSwitch.test.ts
+# or
+npx hardhat test test/ProofOfProtest.test.ts
+```
+
+Note: The tests are written in TypeScript and use Chai (expect) and ethers (from hardhat) for assertions and contract interaction.
 
 ---
 
