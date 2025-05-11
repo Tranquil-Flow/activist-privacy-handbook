@@ -1,152 +1,142 @@
-# ProofOfProtest
+# 🛡️ Activist Toolkit  
+**Protect the protest. Preserve the proof.**
 
-A privacy-preserving POAP (Proof of Attendance Protocol) system built on Oasis Sapphire for protest events. This system allows event organizers to mint verifiable attendance tokens while maintaining participant privacy.
+A decentralized, privacy-first protocol to empower activists, protect their identities, and preserve immutable proof of protest — even under repressive regimes. Built using Oasis Sapphire and ROFL, Activist Toolkit provides censorship-resistant infrastructure to **verify presence**, **coordinate emergency alerts**, and **resist digital erasure** without exposing user identities.
 
-## Features
+---
 
-- Privacy-preserving event registration
-- Geolocation-based attendance verification
-- Multi-event support
-- Time-window based event validation
-- Secure POAP minting and verification
+`[INSERT VISUAL THUMBNAIL HERE]`
 
-## Prerequisites
+---
 
-- Node.js (v18 or later recommended)
-- npm or yarn
-- A wallet with ROSE tokens (for Sapphire testnet)
+# 🛡️ Activist Toolkit  
+**Protect the protest. Preserve the proof.**
 
-## Installation
+A decentralized, privacy-first protocol to empower activists, protect their identities, and preserve immutable proof of protest — even under repressive regimes. Built using Oasis Sapphire and ROFL, Activist Toolkit provides censorship-resistant infrastructure to **verify presence**, **coordinate emergency alerts**, and **resist digital erasure** without exposing user identities.
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd activist-privacy-handbook
-```
+---
 
-2. Install dependencies:
-```bash
-npm install
-```
+## 📸 Thumbnail  
+`[INSERT VISUAL THUMBNAIL HERE]`
 
-3. Create a `.env` file in the root directory:
-```
-PRIVATE_KEY=your_private_key_here
-```
+---
 
-## Usage
+## ✊ Why Activist Toolkit?
 
-### Deployment
+**Activist Toolkit** is a secure, censorship-resistant system for modern human rights defenders.
 
-Deploy the contract to Sapphire testnet:
-```bash
-npx hardhat deploy --network sapphire-testnet
-```
+In the face of growing authoritarianism and digital surveillance, activists around the world are risking their lives — but often have **no way to verify their actions**, protect their communications, or prove their contributions.
 
-### Creating an Event
+Conventional digital tools like photos or chat logs are:
+- Easily manipulated  
+- Dangerous to share  
+- Frequently dismissed in legal or asylum proceedings  
 
-Create a new protest event:
-```bash
-npx hardhat create-event \
-  --address <contract-address> \
-  --name "Climate March" \
-  --points "Start Point, Mid Point, End Point" \
-  --duration 24
-```
+**Blockchain isn’t just useful — it’s essential.**  
+It’s the **only infrastructure** that makes proof tamper-proof, decentralized, and permanent.
 
-### Minting POAPs
+---
 
-Mint a POAP for an attendee:
-```bash
-npx hardhat mint-poap \
-  --address <contract-address> \
-  --eventId <event-id> \
-  --attendee <attendee-address> \
-  --tokenUri "ipfs://..." \
-  --geoHash <geo-hash>
-```
+## 🔍 What It Does
 
-### Verifying Participation
+- **✅ Proof of Protest**  
+  Anonymous, geolocation-based, timestamped credentials that verify protest participation — without revealing personal identity.
 
-Check if an address has a POAP for a specific event:
-```bash
-npx hardhat verify-participation \
-  --address <contract-address> \
-  --attendee <attendee-address> \
-  --eventId <event-id>
-```
+- **🔴 Dead Man Switch (Red Alert)**  
+  A failsafe timer that triggers alerts to trusted contacts if an activist goes silent or is detained.
 
-### Full Demo
+- **🧾 Peer Attestation System**  
+  A decentralized verification process where trusted members vouch for presence, preventing fake participation or infiltration.
 
-Run a complete demonstration of all features:
-```bash
-npx hardhat full-demo --network sapphire-testnet
-```
+---
 
-## Contract Features
+## 🔑 Feature Examples
 
-### Event Management
-- Create events with custom time windows
-- Define multiple location points for route verification
-- Event status tracking (active/inactive)
+### ✅ Proof of Protest  
+> _Anonymous, verifiable presence — without needing to reveal your face or contacts._
 
-### POAP System
-- Privacy-preserving attendance verification
-- Geolocation hash verification
-- Unique token minting per event
-- Token URI support for metadata
+**Sidika** is applying for asylum in the Netherlands. As a gender rights activist from Turkey, she must prove her involvement in protests — but she never appeared in photos and won’t share private chats.  
+Using Activist Toolkit, she receives an **immutable, peer-attested credential**: she was present at X protest, on Y date, verified by trusted witnesses.
 
-### Security Features
-- Owner-only event creation and POAP minting
-- Time-window validation
-- Duplicate claim prevention
-- POAP revocation capability
+Now she has verifiable proof — **without compromising herself or others**.
 
-## Development
+---
 
-### Compile Contracts
-```bash
-npx hardhat compile
-```
+### 🔴 Dead Man Switch  
+> _Secure fallback for detained activists or those crossing danger zones._
 
-### Run Tests
-```bash
-npx hardhat test
-```
+**Abdul** is helping his sister cross a border into Germany. He sets a **6-hour timer** in the toolkit.  
+If he doesn't cancel in time, the app automatically sends a **prewritten message** to his Telegram group of legal and support contacts.
 
-### Clean Build
-```bash
-npx hardhat clean
-```
+This feature can **trigger help when silence becomes danger**.
 
-## Network Configuration
+---
 
-The project is configured for three networks:
-- `sapphire`: Oasis Sapphire mainnet
-- `sapphire-testnet`: Oasis Sapphire testnet
-- `sapphire-localnet`: Local development network
+## ⚙️ How It Works  
+`[INSERT TECH STACK DIAGRAM HERE]`
 
-## Security Considerations
+### 🔧 Tech Overview
 
-- Private keys should never be committed to the repository
-- Always use environment variables for sensitive data
-- Test thoroughly on testnet before mainnet deployment
-- Consider gas costs and limits for all operations
+- **Oasis Sapphire** – Confidential EVM for encrypted smart contracts and private on-chain logic.  
+- **Oasis ROFL** – Secure TEE environment for off-chain logic (e.g. red alerts, proof validation).  
+- **ZK Identity Tools (e.g. Semaphore)** – To enable anonymity and unlinkable attestations.  
+- **Smart Contracts** – For soulbound credentials, timers, and proof mechanisms.  
+- **IPFS** *(optional)* – For decentralized metadata and document storage.
 
-## Contributing
+> ✅ We use `roflEnsureAuthorizedOrigin` to guarantee only verified, secure TEE-originated data is accepted on-chain.  
+> 🔧 _Note: Link to code implementation will be added soon._
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+---
 
-## License
+## 🚧 Roadmap: Work in Progress
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **🪙 Anonymous Fundraising**  
+  Create and contribute to activist campaigns privately via blockchain-native donations.
 
-## Acknowledgments
+- **💬 Activist Education Chatbot**  
+  A conversational AI assistant trained on global activist handbooks for real-time, context-aware guidance.
 
-- Built on Oasis Sapphire for privacy-preserving smart contracts
-- Inspired by the need for privacy in protest movements
-- Uses OpenZeppelin contracts for security
+- **🌐 Global Network Expansion**  
+  Develop tools for collective resource sharing and decentralized reputation systems across movements.
+
+---
+
+## 🏆 Hackathon Bounties
+
+This project qualifies for:
+
+- **Privacy Track** — Leveraging Sapphire to encrypt user activity and on-chain protest proofs.  
+- **Security Track** — Secure fallback alerts, identity protection, and tamper-proof attestations via ROFL.
+
+### ✅ Judging Criteria Checkpoints:
+
+- **Potential Impact**: Enables global activist safety and verification at scale.  
+- **Confidentiality**: Data never leaves ROFL unencrypted; Sapphire encrypts smart contract state.  
+- **UX**: Designed for non-crypto-native users with a clean, simple, safe experience.  
+- **Innovation**: Uses geolocation-based protest proofs and peer attestations — a novel combination on Sapphire.  
+- **Implementation Quality**: Core features functional and tested with Oasis stack.  
+- **Bonus**: Integrated `roflEnsureAuthorizedOrigin` for verified confidential origin in smart contracts.
+
+---
+
+## 🌐 Deployments
+
+- [Website](INSERT_LINK)  
+- [Slides](INSERT_LINK)  
+- [Video Demo](INSERT_LINK)  
+- [GitHub Repository](INSERT_LINK)  
+- [Smart Contract Address](INSERT_CONTRACT_LINK)
+
+---
+
+## 🧠 Team
+
+- [Toufik Airane](INSERT_LINK)  
+- [Evi Nova](INSERT_LINK)  
+- [1uiz](INSERT_LINK)  
+- [Migle](INSERT_LINK)
+
+
+---
+
+> _Built during ETHDam III, 2025 — for activists everywhere who defend freedom, dignity, and truth._
