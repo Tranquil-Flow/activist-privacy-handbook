@@ -117,7 +117,7 @@ This project qualifies for:
 * [WEBSITE](https://v0-create-protest-feature-blue.vercel.app/)
 * [Landing Page DESIGN](https://www.figma.com/design/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit---UX-UI?node-id=38-6162&t=E9jOpOinqq8Srwo1-1) 
 * [PRESENTATION](https://www.figma.com/slides/BdqHfgxqRvtosag1goacqq/Activist-Toolkit_Pitchdeck?node-id=13-19&t=8NpyhTpSj6HUT5t7-1)
-* [UX/UI](https://www.figma.com/design/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit?node-id=30-182&t=XnuQkzpEu4kpFXS6-1) 
+* [UX/UI](https://www.figma.com/proto/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit---UX-UI?node-id=23-2&t=E9jOpOinqq8Srwo1-1)
 
 ---
 
