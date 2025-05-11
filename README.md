@@ -110,11 +110,11 @@ This project qualifies for:
 
 ## 🌐 Deployments
 
-* GitHub
-* VIDEO DEMO
-* WEBSITE
-* PRESENTATION
-* UX/UI
+* [GitHub](https://github.com/Tranquil-Flow/activist-privacy-handbook)
+* [VIDEO DEMO](https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h97f9c73493)
+* [WEBSITE](https://v0-create-protest-feature-blue.vercel.app/)
+* [PRESENTATION](https://www.figma.com/slides/BdqHfgxqRvtosag1goacqq/Activist-Toolkit_Pitchdeck?node-id=13-19&t=8NpyhTpSj6HUT5t7-1)
+* [UX/UI](https://www.figma.com/design/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit?node-id=30-182&t=XnuQkzpEu4kpFXS6-1) 
 
 ---
 
