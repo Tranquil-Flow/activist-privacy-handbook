@@ -5,7 +5,7 @@ A decentralized, privacy-first protocol to empower activists, protect their iden
 
 ---
 
-![Image](https://github.com/user-attachments/assets/1945ce3d-ddff-4697-9bb9-f6adbda56409)
+![Image](https://github.com/user-attachments/assets/be302641-5583-4d67-8bbb-b33987c9df80)
 
 ---
 
