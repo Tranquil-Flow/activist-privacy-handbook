@@ -113,36 +113,15 @@ This project qualifies for:
 * [GitHub](https://github.com/Tranquil-Flow/activist-privacy-handbook)
 * [VIDEO DEMO](https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h97f9c73493)
 * [WEBSITE](https://v0-create-protest-feature-blue.vercel.app/)
+* [Landing Page DESIGN](https://www.figma.com/design/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit---UX-UI?node-id=38-6162&t=E9jOpOinqq8Srwo1-1) 
 * [PRESENTATION](https://www.figma.com/slides/BdqHfgxqRvtosag1goacqq/Activist-Toolkit_Pitchdeck?node-id=13-19&t=8NpyhTpSj6HUT5t7-1)
 * [UX/UI](https://www.figma.com/design/OVZLq8hTe1JcEHcpzrwQRo/Activist-Toolkit?node-id=30-182&t=XnuQkzpEu4kpFXS6-1) 
 
 ---
 
-## Testing
-
-Running Tests
-
-To run the test suite (including DeadManSwitch.test.ts and ProofOfProtest.test.ts), execute the following command in your terminal (from the project root):
-
-```bash
-npx hardhat test
-```
-
-If you wish to run a specific test file, for example, run DeadManSwitch tests or ProofOfProtest tests, use:
-
-```bash
-npx hardhat test test/DeadManSwitch.test.ts
-# or
-npx hardhat test test/ProofOfProtest.test.ts
-```
-
-Note: The tests are written in TypeScript and use Chai (expect) and ethers (from hardhat) for assertions and contract interaction.
-
----
-
 ## 🧠 Team
 
-Toufik Airane | Evi Nova | 1uiz | Migle
+[Toufik](https://taikai.network/toufik.airane) | [Evi](https://taikai.network/tranquil-flow) | [1uiz](https://taikai.network/1uiz) | [Migle](https://taikai.network/rakymi)
 
 
 ---
