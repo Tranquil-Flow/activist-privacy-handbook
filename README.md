@@ -27,6 +27,8 @@ It's the **only infrastructure** that makes proof tamper-proof, decentralized, a
 
 ## 🔍 What It Does
 
+<img width="1156" alt="Image" src="https://github.com/user-attachments/assets/eb257aa4-bff7-41a4-8fab-b81b7d5733a7" />
+
 - **✅ Proof of Protest**  
   Anonymous, geolocation-based, timestamped credentials that verify protest participation — without revealing personal identity.
 
