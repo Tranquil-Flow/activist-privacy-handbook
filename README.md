@@ -5,19 +5,7 @@ A decentralized, privacy-first protocol to empower activists, protect their iden
 
 ---
 
-`[INSERT VISUAL THUMBNAIL HERE]`
-
----
-
-# 🛡️ Activist Toolkit  
-**Protect the protest. Preserve the proof.**
-
-A decentralized, privacy-first protocol to empower activists, protect their identities, and preserve immutable proof of protest — even under repressive regimes. Built using Oasis Sapphire and ROFL, Activist Toolkit provides censorship-resistant infrastructure to **verify presence**, **coordinate emergency alerts**, and **resist digital erasure** without exposing user identities.
-
----
-
-## 📸 Thumbnail  
-`[INSERT VISUAL THUMBNAIL HERE]`
+![Image](https://github.com/user-attachments/assets/1945ce3d-ddff-4697-9bb9-f6adbda56409)
 
 ---
 
