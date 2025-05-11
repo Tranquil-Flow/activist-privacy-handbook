@@ -110,11 +110,11 @@ This project qualifies for:
 
 ## 🌐 Deployments
 
-- [Website](INSERT_LINK)  
-- [Slides](INSERT_LINK)  
-- [Video Demo](INSERT_LINK)  
-- [GitHub Repository](INSERT_LINK)  
-- [Smart Contract Address](INSERT_CONTRACT_LINK)
+* GitHub
+* VIDEO DEMO
+* WEBSITE
+* PRESENTATION
+* UX/UI
 
 ---
 
@@ -142,10 +142,7 @@ Note: The tests are written in TypeScript and use Chai (expect) and ethers (from
 
 ## 🧠 Team
 
-- [Toufik Airane](INSERT_LINK)  
-- [Evi Nova](INSERT_LINK)  
-- [1uiz](INSERT_LINK)  
-- [Migle](INSERT_LINK)
+Toufik Airane | Evi Nova | 1uiz | Migle
 
 
 ---
