@@ -1,0 +1,143 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        { "internalType": "bytes32", "name": "eventId", "type": "bytes32" },
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "string[]", "name": "points", "type": "string[]" },
+        { "internalType": "uint256", "name": "startTime", "type": "uint256" },
+        { "internalType": "uint256", "name": "endTime", "type": "uint256" }
+      ],
+      "name": "createEvent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "to", "type": "address" },
+        { "internalType": "bytes32", "name": "eventId", "type": "bytes32" },
+        { "internalType": "string", "name": "tokenURI", "type": "string" },
+        { "internalType": "bytes32", "name": "geoHash", "type": "bytes32" }
+      ],
+      "name": "mintPOAP",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "user", "type": "address" },
+        { "internalType": "bytes32", "name": "eventId", "type": "bytes32" }
+      ],
+      "name": "hasPOAP",
+      "outputs": [
+        { "internalType": "bool", "name": "", "type": "bool" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "bytes32", "name": "eventId", "type": "bytes32" }
+      ],
+      "name": "getProtestEvent",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "uint256", "name": "startTime", "type": "uint256" },
+            { "internalType": "uint256", "name": "endTime", "type": "uint256" },
+            { "internalType": "bool", "name": "active", "type": "bool" },
+            { "internalType": "string[]", "name": "locationPoints", "type": "string[]" }
+          ],
+          "internalType": "struct ProofOfProtest.ProtestEvent",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+      ],
+      "name": "getGeoHash",
+      "outputs": [
+        { "internalType": "bytes32", "name": "", "type": "bytes32" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+      ],
+      "name": "getEventId",
+      "outputs": [
+        { "internalType": "bytes32", "name": "", "type": "bytes32" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+      ],
+      "name": "getMintTimestamp",
+      "outputs": [
+        { "internalType": "uint256", "name": "", "type": "uint256" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
+        { "internalType": "bytes32", "name": "geoHash", "type": "bytes32" }
+      ],
+      "name": "verifyGeoHash",
+      "outputs": [
+        { "internalType": "bool", "name": "", "type": "bool" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+      ],
+      "name": "revokePOAP",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "internalType": "bytes32", "name": "eventId", "type": "bytes32" },
+        { "indexed": false, "internalType": "string", "name": "name", "type": "string" }
+      ],
+      "name": "EventCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "internalType": "address", "name": "attendee", "type": "address" },
+        { "indexed": true, "internalType": "uint256", "name": "tokenId", "type": "uint256" },
+        { "indexed": true, "internalType": "bytes32", "name": "eventId", "type": "bytes32" },
+        { "indexed": false, "internalType": "bytes32", "name": "geoHash", "type": "bytes32" }
+      ],
+      "name": "ProtestPOAPMinted",
+      "type": "event"
+    }
+  ],
+  "address": "0x9d7bdD364d505B00806b927A3d6eC0638dD24176"
+} 

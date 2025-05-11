@@ -1,6 +1,6 @@
 const bech32 = require("bech32");
 
-const roflAppID = "rofl1qrqlxfcg8sve9h3m0rv8k7vp7r800x8lzuxr4hf2";
+const roflAppID = "rofl1qrtv4yv5arlxuxqwly6m3cawqcn0qj6dmut6cvwa";
 
 const { prefix, words } = bech32.decode(roflAppID);
 if (prefix !== "rofl") {

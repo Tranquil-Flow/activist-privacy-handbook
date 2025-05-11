@@ -7,6 +7,8 @@ async function main() {
   const deadManSwitch = await DeadManSwitch.deploy(admin);
   await deadManSwitch.waitForDeployment();
   console.log('DeadManSwitch deployed to:', await deadManSwitch.getAddress());
+  console.log("Verifying DeadManSwitch on Etherscan (or Sapphire block explorer)…");
+  await hre.run("verify:verify", { address: await deadManSwitch.getAddress(), constructorArguments: [admin] });
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -36,7 +36,10 @@ class DeadManSwitch:
         with open('contracts/DeadManSwitch.json', 'r') as f:
             contract_data = json.load(f)
             self.contract_abi = contract_data['abi']
-            self.contract_address = os.getenv('CONTRACT_ADDRESS')  # Deployed contract address
+            contract_address = os.getenv('CONTRACT_ADDRESS')  # Deployed contract address
+            if not contract_address:
+                raise ValueError("CONTRACT_ADDRESS environment variable not set")
+            self.contract_address = Web3.to_checksum_address(contract_address)
         
         self.contract = self.web3.eth.contract(address=self.contract_address, abi=self.contract_abi)
         
@@ -132,6 +135,7 @@ class DeadManSwitch:
                 return "Transaction reverted"
                 
             # Send Telegram message with the details we saved BEFORE triggering
+            telegram_success = True
             if self.bot:
                 import asyncio
                 try:
@@ -139,7 +143,16 @@ class DeadManSwitch:
                 except RuntimeError:
                     loop = asyncio.new_event_loop()
                     asyncio.set_event_loop(loop)
-                loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 MANUAL ALERT TRIGGERED 🚨\n\n{message}"))
+                try:
+                    loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 MANUAL ALERT TRIGGERED 🚨\n\n{message}"))
+                except Exception as e:
+                    # Don't fail the entire operation if Telegram fails
+                    logger.error(f"Error sending Telegram message: {e}")
+                    telegram_success = False
+            
+            if not telegram_success:
+                logger.warning("Alert was triggered in contract, but Telegram notification failed")
+                
             return True
         except Exception as e:
             logger.error(f"Error triggering alert: {e}")
@@ -179,6 +192,7 @@ class DeadManSwitch:
                 return "Transaction reverted"
                 
             # Send Telegram message with the details we saved BEFORE triggering
+            telegram_success = True
             if self.bot:
                 import asyncio
                 try:
@@ -186,7 +200,16 @@ class DeadManSwitch:
                 except RuntimeError:
                     loop = asyncio.new_event_loop()
                     asyncio.set_event_loop(loop)
-                loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 DEAD MANS SWITCH TRIGGERED 🚨\n\n{message}"))
+                try:
+                    loop.run_until_complete(self.bot.send_message(chat_id=group_id, text=f"🚨 DEAD MANS SWITCH TRIGGERED 🚨\n\n{message}"))
+                except Exception as e:
+                    # Don't fail the entire operation if Telegram fails
+                    logger.error(f"Error sending Telegram message: {e}")
+                    telegram_success = False
+            
+            if not telegram_success:
+                logger.warning("Alert was triggered in contract, but Telegram notification failed")
+                
             return True
         except Exception as e:
             logger.error(f"Error triggering alert by ROFL: {e}")
@@ -198,6 +221,90 @@ class DeadManSwitch:
         alert = self.contract.functions.alerts(alert_id_bytes).call()
         logger.info(f"Fetched alert from contract: {alert}")
         return alert
+
+    def scan_alerts_for_rofl(self, run_once=False):
+        """
+        Scan for alerts that need to be triggered by ROFL due to missed check-ins.
+        If run_once is False, this will run in an infinite loop, checking periodically.
+        If run_once is True, it will do a single scan and return.
+        """
+        check_interval = 10  # seconds between checks
+        
+        def perform_scan():
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            logger.info(f"[{timestamp}] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...")
+            current_time = int(time.time())
+            
+            try:
+                # Get recent events for alert creation
+                # Limit to 100 blocks to avoid RPC limits
+                block_number = self.web3.eth.block_number
+                from_block = max(0, block_number - 100)  # Last 100 blocks to avoid RPC limits
+                
+                # Get alert creation events
+                alert_events = self.contract.events.AlertCreated.get_logs(from_block=from_block)
+                
+                logger.info(f"Found {len(alert_events)} recent alert events to check")
+                alerts_triggered = 0
+                
+                for event in alert_events:
+                    alert_id_bytes = event.args.alertId
+                    alert_id_hex = alert_id_bytes.hex()
+                    
+                    # Get alert details
+                    alert = self.contract.functions.alerts(alert_id_bytes).call()
+                    
+                    # Check if alert exists (user address is not zero)
+                    if alert[0] == '0x0000000000000000000000000000000000000000':
+                        continue
+                    
+                    # Parse alert details
+                    user_address = alert[0]
+                    expiry_time = alert[3]    # expiryTime 
+                    check_in_seconds = alert[4]  # checkInSeconds
+                    last_check_in = alert[6]  # lastCheckIn
+                    
+                    logger.info(f"Checking alert {alert_id_hex}:")
+                    logger.info(f"  User: {user_address}")
+                    logger.info(f"  Last check-in: {last_check_in}")
+                    logger.info(f"  Check-in seconds: {check_in_seconds}")
+                    logger.info(f"  Expiry time: {expiry_time}")
+                    logger.info(f"  Current time: {current_time}")
+                    
+                    # Check conditions for triggering:
+                    # 1. Check-in deadline missed (current_time > last_check_in + check_in_seconds)
+                    # 2. Not expired (current_time < expiry_time)
+                    deadline_missed = current_time > (last_check_in + check_in_seconds)
+                    not_expired = current_time < expiry_time
+                    
+                    if deadline_missed and not_expired:
+                        logger.info(f"⚠️ Alert {alert_id_hex} has missed check-in deadline. Triggering...")
+                        result = self.trigger_alert_by_rofl(alert_id_hex)
+                        
+                        if result is True:
+                            logger.info(f"✅ Alert {alert_id_hex} triggered successfully by ROFL")
+                            alerts_triggered += 1
+                        else:
+                            logger.error(f"❌ Failed to trigger alert {alert_id_hex}: {result}")
+                
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                logger.info(f"[{timestamp}] ✓ SCAN COMPLETE: {'No alerts needed triggering' if alerts_triggered == 0 else f'Triggered {alerts_triggered} alerts'}. Next scan in {check_interval} seconds.")
+                return alerts_triggered
+                
+            except Exception as e:
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                logger.error(f"[{timestamp}] ❌ SCAN ERROR: {e}")
+                return 0
+        
+        if run_once:
+            return perform_scan()
+        
+        # Continuous monitoring loop
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        logger.info(f"[{timestamp}] 🚀 Starting continuous ROFL monitoring (checking every {check_interval} seconds)...")
+        while True:
+            perform_scan()
+            time.sleep(check_interval)
 
     # TODO: Fix this
     def set_rofl_app_id(self, rofl_app_id: str) -> bool:
@@ -219,10 +326,12 @@ class DeadManSwitch:
             return False
 
 def main():
+    # Create the DeadManSwitch instance
     switch = DeadManSwitch()
-    while True:
-        switch.check_alerts()
-        time.sleep(switch.check_interval)
+    
+    # Start monitoring for alerts that need to be triggered by ROFL
+    logger.info("Starting Dead Man's Switch ROFL monitoring service")
+    switch.scan_alerts_for_rofl(run_once=False)  # This runs in an infinite loop
 
 if __name__ == "__main__":
     main() 

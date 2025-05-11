@@ -85,5 +85,19 @@ def list_alerts():
     """List all active alerts (not implemented)"""
     return jsonify({'error': 'Listing alerts is not implemented in contract-backed mode.'}), 501
 
+@app.route('/api/scan', methods=['POST'])
+def scan_rofl():
+    """Manually trigger a scan for alerts that need to be triggered by ROFL"""
+    try:
+        # Perform a single scan
+        alerts_triggered = switch.scan_alerts_for_rofl(run_once=True)
+        return jsonify({
+            'message': f'ROFL scan completed. Triggered {alerts_triggered} alerts.',
+            'alerts_triggered': alerts_triggered
+        }), 200
+    except Exception as e:
+        logger.error(f"Error during ROFL scan: {e}")
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True) 

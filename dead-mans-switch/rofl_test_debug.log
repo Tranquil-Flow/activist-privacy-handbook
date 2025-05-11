@@ -1,0 +1,652 @@
+2025-05-11 07:38:35,138 - INFO - Starting ROFL test script...
+2025-05-11 07:38:35,138 - INFO - Checking ROFL service status...
+2025-05-11 07:38:35,206 - INFO - ✅ ROFL service process found:
+2025-05-11 07:38:35,206 - DEBUG - Process details:
+evinova          96189   1.0  0.2 412033696  48688 s136  SN    6:22AM   0:14.61 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:38:35,213 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:38:35,224 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:38:35,224 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:38:35,224 - INFO - Checking recent ROFL logs...
+2025-05-11 07:38:35,238 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:38:35,238 - INFO - Creating alert with short check-in time...
+2025-05-11 07:38:35,238 - DEBUG - Executing curl: curl -X POST http://localhost:5000/api/alerts -H "Content-Type: application/json" -d '{"user_id": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", "message": "ROFL TEST ALERT - This should be auto-triggered by ROFL", "group_id": "-1002687819162", "expiry_seconds": 3600, "check_in_seconds": 15}'
+2025-05-11 07:39:36,322 - INFO - Starting ROFL test script...
+2025-05-11 07:39:36,322 - INFO - Checking ROFL service status...
+2025-05-11 07:39:36,386 - INFO - ✅ ROFL service process found:
+2025-05-11 07:39:36,386 - DEBUG - Process details:
+evinova          96189   0.0  0.1 412164768  19424 s136  SN    6:22AM   0:14.98 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:39:36,390 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:39:36,398 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:39:36,399 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:39:36,399 - INFO - Checking recent ROFL logs...
+2025-05-11 07:39:36,408 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:39:36,408 - INFO - Creating alert with short check-in time...
+2025-05-11 07:39:36,408 - DEBUG - Executing curl: curl -X POST http://localhost:5000/api/alerts -H "Content-Type: application/json" -d '{"user_id": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", "message": "ROFL TEST ALERT - This should be auto-triggered by ROFL", "group_id": "-1002687819162", "expiry_seconds": 3600, "check_in_seconds": 15}'
+2025-05-11 07:39:49,022 - INFO - ✅ Command executed successfully:
+2025-05-11 07:39:49,023 - DEBUG - Command output: {
+  "alert_id": "3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 07:39:49,023 - INFO - 📝 Alert created successfully with ID: 3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9
+2025-05-11 07:39:49,023 - DEBUG - Full alert response: {
+  "alert_id": "3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 07:39:49,023 - INFO - 
+⏱️ Waiting 30 seconds for ROFL to process the alert...
+2025-05-11 07:40:19,028 - INFO - Starting alert status check for alert_id: 3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9
+2025-05-11 07:40:19,029 - INFO - 
+Attempt 1/6 to check if alert was triggered...
+2025-05-11 07:40:19,029 - INFO - Checking ROFL service status...
+2025-05-11 07:40:19,101 - INFO - ✅ ROFL service process found:
+2025-05-11 07:40:19,101 - DEBUG - Process details:
+evinova          96189   0.4  0.2 412164768  40160 s136  SN    6:22AM   0:15.32 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:40:19,103 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:40:19,111 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:40:19,113 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:40:19,113 - INFO - Checking recent ROFL logs...
+2025-05-11 07:40:19,123 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:40:19,124 - INFO - Checking alert status at: http://localhost:5000/api/alerts/3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9
+2025-05-11 07:40:19,124 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:40:19,129 - DEBUG - http://localhost:5000 "GET /api/alerts/3242d020f28d2330a2cb98b60629936df21d254f1af59f1da39de7d788798cc9 HTTP/1.1" 404 207
+2025-05-11 07:40:19,129 - DEBUG - Status code: 404
+2025-05-11 07:40:19,129 - DEBUG - Response: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-11 07:40:19,129 - INFO - ✅ Alert not found - checking if it was triggered by ROFL...
+2025-05-11 07:40:19,129 - INFO - Checking ROFL logs for trigger confirmation...
+2025-05-11 07:40:19,143 - DEBUG - Trigger logs:
+INFO:app:[TRIGGER_ALERT_BY_ROFL] alert_id_bytes (hex): f20a58618412db47ac162eb497b9baf8515139dc28caf84f2480b9ce86f8c64d
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_call
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_chainId
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId, Response: {'jsonrpc': '2.0', 'id': 5, 'result': '0x5aff'}
+
+2025-05-11 07:40:19,154 - DEBUG - Telegram logs:
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+INFO:app:[2025-05-11 07:27:05] 🚀 Starting continuous ROFL monitoring (checking every 10 seconds)...
+INFO:app:[2025-05-11 07:27:05] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:web3._utils.http_session_manager.HTTPSessionManager:Session cached: https://testnet.sapphire.oasis.dev, <requests.sessions.Session object at 0x111f7eba0>
+
+2025-05-11 07:40:19,154 - INFO - ✅ Test completed: Alert was triggered
+2025-05-11 07:54:52,805 - INFO - Starting ROFL test script...
+2025-05-11 07:54:52,805 - INFO - Checking ROFL service status...
+2025-05-11 07:54:52,871 - INFO - ✅ ROFL service process found:
+2025-05-11 07:54:52,871 - DEBUG - Process details:
+evinova          96189   0.0  0.2 412164768  39264 s136  SN    6:22AM   0:19.57 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:54:52,875 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:54:52,904 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:54:52,904 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:54:52,904 - INFO - Checking recent ROFL logs...
+2025-05-11 07:54:52,914 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:54:52,914 - INFO - Creating alert with short check-in time...
+2025-05-11 07:54:52,914 - DEBUG - Executing curl: curl -X POST http://localhost:5000/api/alerts -H "Content-Type: application/json" -d '{"user_id": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", "message": "ROFL TEST ALERT - This should be auto-triggered by ROFL", "group_id": "-1002687819162", "expiry_seconds": 3600, "check_in_seconds": 15}'
+2025-05-11 07:55:02,323 - INFO - ✅ Command executed successfully:
+2025-05-11 07:55:02,325 - DEBUG - Command output: {
+  "alert_id": "aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 07:55:02,326 - INFO - 📝 Alert created successfully with ID: aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd
+2025-05-11 07:55:02,326 - DEBUG - Full alert response: {
+  "alert_id": "aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 07:55:02,326 - INFO - 
+⏱️ Waiting 30 seconds for ROFL to process the alert...
+2025-05-11 07:55:32,332 - INFO - Starting alert status check for alert_id: aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd
+2025-05-11 07:55:32,332 - INFO - 
+Attempt 1/6 to check if alert was triggered...
+2025-05-11 07:55:32,332 - INFO - Checking ROFL service status...
+2025-05-11 07:55:32,411 - INFO - ✅ ROFL service process found:
+2025-05-11 07:55:32,411 - DEBUG - Process details:
+evinova          96189   0.0  0.1 412164768  31056 s136  SN    6:22AM   0:19.71 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:55:32,412 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:55:32,424 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:55:32,424 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:55:32,424 - INFO - Checking recent ROFL logs...
+2025-05-11 07:55:32,435 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:55:32,435 - INFO - Checking alert status at: http://localhost:5000/api/alerts/aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd
+2025-05-11 07:55:32,436 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:55:32,439 - DEBUG - http://localhost:5000 "GET /api/alerts/aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd HTTP/1.1" 404 207
+2025-05-11 07:55:32,439 - DEBUG - Status code: 404
+2025-05-11 07:55:32,439 - DEBUG - Response: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-11 07:55:32,439 - INFO - ✅ Alert not found - checking if it was triggered by ROFL...
+2025-05-11 07:55:32,440 - INFO - Checking ROFL logs for trigger confirmation...
+2025-05-11 07:55:32,453 - DEBUG - Trigger logs:
+INFO:app:[TRIGGER_ALERT_BY_ROFL] alert_id_bytes (hex): f20a58618412db47ac162eb497b9baf8515139dc28caf84f2480b9ce86f8c64d
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_call
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_chainId
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId, Response: {'jsonrpc': '2.0', 'id': 5, 'result': '0x5aff'}
+
+2025-05-11 07:55:32,469 - DEBUG - Telegram logs:
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+INFO:app:[2025-05-11 07:27:05] 🚀 Starting continuous ROFL monitoring (checking every 10 seconds)...
+INFO:app:[2025-05-11 07:27:05] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:web3._utils.http_session_manager.HTTPSessionManager:Session cached: https://testnet.sapphire.oasis.dev, <requests.sessions.Session object at 0x111f7eba0>
+
+2025-05-11 07:55:32,470 - INFO - ✅ Test completed: Alert was triggered
+2025-05-11 07:56:29,725 - INFO - Starting ROFL test script...
+2025-05-11 07:56:29,725 - INFO - Checking ROFL service status...
+2025-05-11 07:56:29,798 - INFO - ✅ ROFL service process found:
+2025-05-11 07:56:29,799 - DEBUG - Process details:
+evinova          96189   0.7  0.2 412164768  45840 s136  SN    6:22AM   0:20.06 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 07:56:29,803 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 07:56:29,825 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 07:56:29,825 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 07:56:29,825 - INFO - Checking recent ROFL logs...
+2025-05-11 07:56:29,837 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 412, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 413, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 414, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 415, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 416, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 417, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 418, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 419, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 420, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 421, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 422, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt, Response: {'jsonrpc': '2.0', 'id': 423, 'result': None}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getTransactionReceipt
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getTransactionReceipt
+
+2025-05-11 07:56:29,838 - INFO - Creating alert with short check-in time...
+2025-05-11 07:56:29,838 - DEBUG - Executing curl: curl -X POST http://localhost:5000/api/alerts -H "Content-Type: application/json" -d '{"user_id": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", "message": "ROFL TEST ALERT - This should be auto-triggered by ROFL", "group_id": "-1002687819162", "expiry_seconds": 3600, "check_in_seconds": 15}'
+2025-05-11 07:58:30,532 - INFO - ✅ Command executed successfully:
+2025-05-11 07:58:30,533 - DEBUG - Command output: {
+  "error": "Transaction HexBytes('0x699d6b0dc026788c0f6dc497fe9143295f9de8648ec2b0d837acebd1aa52f4b1') is not in the chain after 120 seconds"
+}
+
+2025-05-11 07:58:30,533 - ERROR - Cannot proceed without alert ID
+2025-05-11 08:17:30,469 - INFO - Starting ROFL test script...
+2025-05-11 08:17:30,469 - INFO - Checking ROFL service status...
+2025-05-11 08:17:30,559 - INFO - ✅ ROFL service process found:
+2025-05-11 08:17:30,559 - DEBUG - Process details:
+evinova          10685   0.7  0.1 412164768  32400 s157  S+    8:01AM   0:01.92 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+evinova          96189   0.0  0.1 412033696  28848 s136  SN    6:22AM   0:23.93 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 08:17:30,564 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 08:17:30,581 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 08:17:30,581 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 08:17:30,581 - INFO - Checking recent ROFL logs...
+2025-05-11 08:17:30,590 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 556, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:16:49] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:16:59] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 557, 'result': '0xb1872c'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 558, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:16:59] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:17:09] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 559, 'result': '0xb1872d'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 560, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:09] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:17:19] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 561, 'result': '0xb1872f'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 562, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:20] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:17:30] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 563, 'result': '0xb18731'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 564, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:30] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+
+2025-05-11 08:17:30,591 - INFO - Creating alert with short check-in time...
+2025-05-11 08:17:30,591 - DEBUG - Executing curl: curl -X POST http://localhost:5000/api/alerts -H "Content-Type: application/json" -d '{"user_id": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", "message": "ROFL TEST ALERT - This should be auto-triggered by ROFL", "group_id": "-1002687819162", "expiry_seconds": 3600, "check_in_seconds": 15}'
+2025-05-11 08:17:45,151 - INFO - ✅ Command executed successfully:
+2025-05-11 08:17:45,152 - DEBUG - Command output: {
+  "alert_id": "c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 08:17:45,152 - INFO - 📝 Alert created successfully with ID: c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a
+2025-05-11 08:17:45,152 - DEBUG - Full alert response: {
+  "alert_id": "c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a",
+  "message": "Alert created successfully"
+}
+
+2025-05-11 08:17:45,152 - INFO - 
+⏱️ Waiting 30 seconds for ROFL to process the alert...
+2025-05-11 08:18:15,154 - INFO - Starting alert status check for alert_id: c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a
+2025-05-11 08:18:15,155 - INFO - 
+Attempt 1/6 to check if alert was triggered...
+2025-05-11 08:18:15,155 - INFO - Checking ROFL service status...
+2025-05-11 08:18:15,284 - INFO - ✅ ROFL service process found:
+2025-05-11 08:18:15,284 - DEBUG - Process details:
+evinova          10685   0.0  0.1 412164768  32352 s157  S+    8:01AM   0:01.97 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+evinova          96189   0.0  0.1 412164768  32160 s136  SN    6:22AM   0:23.98 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python start_rofl.py
+
+2025-05-11 08:18:15,286 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 08:18:15,298 - DEBUG - http://localhost:5000 "GET /api/health HTTP/1.1" 404 207
+2025-05-11 08:18:15,298 - WARNING - ⚠️ ROFL API returned status 404
+2025-05-11 08:18:15,298 - INFO - Checking recent ROFL logs...
+2025-05-11 08:18:15,309 - DEBUG - Recent ROFL logs:
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 564, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:30] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:17:40] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 565, 'result': '0xb18732'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 566, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:40] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:17:50] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 567, 'result': '0xb18734'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 568, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:17:51] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:18:01] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 569, 'result': '0xb18735'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 570, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:18:01] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+INFO:app:[2025-05-11 08:18:11] 🔍 SCAN STARTED: Checking for alerts that need to be triggered...
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_blockNumber
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_blockNumber, Response: {'jsonrpc': '2.0', 'id': 571, 'result': '0xb18737'}
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_getLogs
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_getLogs, Response: {'jsonrpc': '2.0', 'id': 572, 'result': []}
+INFO:app:Found 0 recent alert events to check
+INFO:app:[2025-05-11 08:18:11] ✓ SCAN COMPLETE: No alerts needed triggering. Next scan in 10 seconds.
+
+2025-05-11 08:18:15,309 - INFO - Checking alert status at: http://localhost:5000/api/alerts/c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a
+2025-05-11 08:18:15,310 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-05-11 08:18:15,314 - DEBUG - http://localhost:5000 "GET /api/alerts/c2f1a5247953479e38ea7ac6827fb565441ff97397b7e0a1f3e0215f16667d2a HTTP/1.1" 404 207
+2025-05-11 08:18:15,314 - DEBUG - Status code: 404
+2025-05-11 08:18:15,314 - DEBUG - Response: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-11 08:18:15,314 - INFO - ✅ Alert not found - checking if it was triggered by ROFL...
+2025-05-11 08:18:15,314 - INFO - Checking ROFL logs for trigger confirmation...
+2025-05-11 08:18:15,327 - DEBUG - Trigger logs:
+INFO:app:[TRIGGER_ALERT_BY_ROFL] alert_id_bytes (hex): aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_call
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_chainId
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId, Response: {'jsonrpc': '2.0', 'id': 312, 'result': '0x5aff'}
+--
+INFO:app:[TRIGGER_ALERT_BY_ROFL] alert_id_bytes (hex): aae1df5144e39c3cb6e8a5779f59e41e4aca518514cea4075c43fdec28f4bacd
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_call
+DEBUG:web3.manager.RequestManager:Making request. Method: eth_chainId
+DEBUG:web3.providers.HTTPProvider:Making request HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId
+DEBUG:urllib3.connectionpool:https://testnet.sapphire.oasis.dev:443 "POST / HTTP/1.1" 200 None
+DEBUG:web3.providers.HTTPProvider:Getting response HTTP. URI: https://testnet.sapphire.oasis.dev, Method: eth_chainId, Response: {'jsonrpc': '2.0', 'id': 324, 'result': '0x5aff'}
+
+2025-05-11 08:18:15,341 - DEBUG - Telegram logs:
+
+2025-05-11 08:18:15,341 - INFO - ✅ Test completed: Alert was triggered

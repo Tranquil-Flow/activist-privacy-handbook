@@ -17,14 +17,14 @@ artifacts:
     compose: compose.yaml
 deployments:
   default:
-    app_id: rofl1qrqlxfcg8sve9h3m0rv8k7vp7r800x8lzuxr4hf2
+    app_id: rofl1qrtv4yv5arlxuxqwly6m3cawqcn0qj6dmut6cvwa
     network: testnet
     paratime: sapphire
     admin: testacc2
-    oci_repository: rofl.sh/b625214f-19af-414b-8b49-20d75aabdcd5:1746917620
+    oci_repository: rofl.sh/d102f8fb-3535-4669-a38f-6cf712488471:1746944222
     trust_root:
-      height: 26538926
-      hash: 30b1a99e7edec84e47762a403da86a81e8d1a2f0bae1e0ae9344199dfce154a0
+      height: 26543543
+      hash: 0281c37a131c5684c960092fdfdec824dda31771efbb151ece3b6a6fdc0444ef
     policy:
       quotes:
         pcs:
@@ -32,14 +32,23 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: mawRIebKj3TPPLuPdfmFplfyiyxUGZxcCtlzfTMO3f0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: uIDwzHislBgtFNBUlxlwkD9RLuWTL2E/BUZOz29AghsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: EKR8OumLnQVIZABrT0cmli5lpIuIK7nfmnP4ZB00kYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: yWRlAjbMUnEusbq6DAD2fkBmn2VfGPbS+i/Yj+xJUqkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
       max_expiration: 3
+    secrets:
+      - name: PRIVATE_KEY
+        value: pGJwa1ggH19iqNQFMQ4s8fPxTwiLfK3xHPowIjN1Ay9Dxa+0VjFkbmFtZVgbWYEUzqMHNkwVHcuZq8s3PNUSBWIPBdS+eAJwZW5vbmNlT8LIv4PgWHtcJTfBuve3UWV2YWx1ZVhSHNbYkncQLlMEgFh8ZiGShPeDD+yGQCt5Kvu8nYCOM5h7uc1z5xU1Jam6zwVWa05ZBOtsURXN2BELvWOIBxlTbhAgjbqaN8W+i+uFN6ZHZ1auzg==
+      - name: TELEGRAM_TOKEN
+        value: pGJwa1ggROoD7LV6ZcbOtQ6Uj7/aDbrpkkoq/acT8CzLZlemYWNkbmFtZVge6kmnqA1ESYLzdD56ejld7ZB7GXQmAkxy8MQXB2C6ZW5vbmNlT5hUYtpJYO1kmBoKjIHp8mV2YWx1ZVg+cDpq87NFeMH4ICxsBhvStVf7j5OQ5hQX+brAn9+WUu5/BN059+UZ7ZUB74Qujgd+iXlTvnx/zFeXufZe/Vw=
+      - name: CONTRACT_ADDRESS
+        value: pGJwa1ggOQOC8sbDnMCtSJDLsWXl17qq3In34LpMtZhd9QoymTFkbmFtZVgg8wL9QnwtB2VVVernc0xaeG4knnyGA3J1u8KLnC3jEQNlbm9uY2VPGNIBinKqbQIBFoMyhYozZXZhbHVlWDrAy81Ktn3FIqvVjWwWUKstBslO65WKMERPeoGipavSM3ktttXUtrHkvd+1SgbvaPZ+mTR3P6C5ft/g
+      - name: SAPPHIRE_RPC_URL
+        value: pGJwa1ggF+LskODiKUIiS4c8oZSfIKRzLIRccAJ33wFHOMnCoxtkbmFtZVggmWnp+K+5GeZFwQRKhqZVoQGNpfhv/0zTwLZUQobLL25lbm9uY2VP5zeacqUeSmiZ7O9Px6NSZXZhbHVlWDK+tcGF1gU8x6M03CVNp20xkP6nHnZF3XDDyF6HvlsRoXxNCUZsNXR3Uf8yPAiPEwvwWA==
     machines:
       default:
         provider: oasis1qp2ens0hsp7gh23wajxa4hpetkdek3swyyulyrmz
         offer: playground_short
-        id: "0000000000000060"
+        id: 000000000000007d

@@ -1,0 +1,30 @@
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+[DEBUG] Admin address: 0xD73D744BB1295f21b03886f3c8EAde60A7eC1756
+ * Serving Flask app 'api'
+ * Debug mode: on
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+On macOS, try disabling the 'AirPlay Receiver' service from System Preferences -> General -> AirDrop & Handoff.
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+[DEBUG] Admin address: 0xD73D744BB1295f21b03886f3c8EAde60A7eC1756
+ * Serving Flask app 'api'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.27.67.76:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 156-087-256
+INFO:werkzeug: * Detected change in '/Users/evinova/activist-privacy-handbook/dead-mans-switch/api.py', reloading
+[DEBUG] Admin address: 0xD73D744BB1295f21b03886f3c8EAde60A7eC1756
+INFO:werkzeug: * Restarting with stat
+DEBUG:telegram.Bot:Set Bot API URL: https://api.telegram.org/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+DEBUG:telegram.Bot:Set Bot API File URL: https://api.telegram.org/file/bot8082498715:AAG7Gz33_f5qVLj-egFPlCmEgShfFqX5p4s
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 156-087-256

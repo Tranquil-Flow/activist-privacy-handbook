@@ -1,7 +1,7 @@
 services:
   deadmanswitch:
     build: .
-    image: "ghcr.io/oasisprotocol/deadmanswitch"
+    image: "ghcr.io/tranquil-flow/deadmanswitch:latest"
     platform: linux/amd64
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
@@ -10,3 +10,6 @@ services:
       - SAPPHIRE_RPC_URL=${SAPPHIRE_RPC_URL}
     ports:
       - "5000:5000"
+    volumes:
+      # Mount the ROFL socket for authenticated calls from inside the container
+      - /run/rofl-appd.sock:/run/rofl-appd.sock
